@@ -21,4 +21,9 @@
         android:textColor="#fffb0404"
         android:textSize="20px"
         android:textAlignment="center" />
+    <Button
+        android:text="SECOND PAGE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/goToSecondPageButton" />
 </RelativeLayout>

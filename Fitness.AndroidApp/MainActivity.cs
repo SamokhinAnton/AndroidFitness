@@ -25,6 +25,10 @@ namespace Fitness.AndroidApp
             fab.Click += FabOnClick;
             EditText testText = FindViewById<EditText>(Resource.Id.testText);
             testText.FocusChange += TestTextOnChange;
+            Button button = FindViewById<Button>(Resource.Id.goToSecondPageButton);
+            button.Click += delegate {
+                StartActivity(typeof(Second));
+            };
 
         }
 
