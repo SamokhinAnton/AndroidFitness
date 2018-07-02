@@ -2005,8 +2005,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070038
 			public const int @fixed = 2131165240;
 			
-			// aapt resource value: 0x7f070084
-			public const int goToFirstPageButton = 2131165316;
+			// aapt resource value: 0x7f070085
+			public const int goToFirstPageButton = 2131165317;
 			
 			// aapt resource value: 0x7f07006d
 			public const int goToSecondPageButton = 2131165293;
@@ -2047,8 +2047,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
 			
-			// aapt resource value: 0x7f070085
-			public const int listView1 = 2131165317;
+			// aapt resource value: 0x7f070084
+			public const int listView1 = 2131165316;
 			
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
