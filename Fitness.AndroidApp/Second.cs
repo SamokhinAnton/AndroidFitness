@@ -13,16 +13,22 @@ using Android.Widget;
 namespace Fitness.AndroidApp
 {
     [Activity(Label = "Second")]
-    public class Second : Activity
+    public class Second : ListActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Second);
+            var id = Intent.GetIntExtra("id", 0);
+            this.ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, new List<string>() { "First", "Second", id.ToString() });
+
+
+
             Button button = FindViewById<Button>(Resource.Id.goToFirstPageButton);
             button.Click += delegate {
                 StartActivity(typeof(MainActivity));
             };
+
             // Create your application here
         }
     }

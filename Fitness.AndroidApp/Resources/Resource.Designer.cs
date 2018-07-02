@@ -1885,8 +1885,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07003c
 			public const int action_mode_close_button = 2131165244;
 			
-			// aapt resource value: 0x7f070085
-			public const int action_settings = 2131165317;
+			// aapt resource value: 0x7f070086
+			public const int action_settings = 2131165318;
 			
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
@@ -2046,6 +2046,9 @@ namespace Fitness.AndroidApp
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
+			
+			// aapt resource value: 0x7f070085
+			public const int listView1 = 2131165317;
 			
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;

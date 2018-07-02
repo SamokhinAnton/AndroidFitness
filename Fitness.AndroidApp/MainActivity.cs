@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Content;
 
 namespace Fitness.AndroidApp
 {
@@ -26,9 +27,7 @@ namespace Fitness.AndroidApp
             EditText testText = FindViewById<EditText>(Resource.Id.testText);
             testText.FocusChange += TestTextOnChange;
             Button button = FindViewById<Button>(Resource.Id.goToSecondPageButton);
-            button.Click += delegate {
-                StartActivity(typeof(Second));
-            };
+            button.Click += SecondOnClick;
 
         }
 
@@ -36,6 +35,15 @@ namespace Fitness.AndroidApp
         {
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
             return true;
+        } 
+
+        private void SecondOnClick(object sender, EventArgs eventArgs)
+        {
+            Intent intent = new Intent(this, typeof(Second));
+            var r = new Random();
+            var id = r.Next(0, 200);
+            intent.PutExtra("Id", id);
+            StartActivity(intent);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
