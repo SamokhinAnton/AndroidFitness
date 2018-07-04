@@ -6,24 +6,15 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello World!" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200px"
-        android:layout_centerHorizontal="true"
-        android:text="Hello World! 2"
-        android:letterSpacing="15"
-        android:textColor="#fffb0404"
-        android:textSize="20px"
-        android:textAlignment="center" />
     <Button
         android:text="SECOND PAGE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/goToSecondPageButton" />
+    <Button
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/goToLoginPage" />
 </RelativeLayout>

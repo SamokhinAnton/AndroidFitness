@@ -22,12 +22,16 @@ namespace Fitness.AndroidApp
 			Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-			FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
-            EditText testText = FindViewById<EditText>(Resource.Id.testText);
-            testText.FocusChange += TestTextOnChange;
+			//FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+   //         fab.Click += FabOnClick;
+            //EditText testText = FindViewById<EditText>(Resource.Id.testText);
+            //testText.FocusChange += TestTextOnChange;
+            
             Button button = FindViewById<Button>(Resource.Id.goToSecondPageButton);
             button.Click += SecondOnClick;
+
+            Button loginButton = FindViewById<Button>(Resource.Id.goToLoginPage);
+            loginButton.Click += LoginOnClick;
 
         }
 
@@ -45,6 +49,11 @@ namespace Fitness.AndroidApp
             intent.PutExtra("Id", id);
             StartActivity(intent);
         }
+        private void LoginOnClick(object sender, EventArgs eventArgs)
+        {
+            Intent intent = new Intent(this, typeof(LoginActivity));
+            StartActivity(intent);
+        }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -58,26 +67,26 @@ namespace Fitness.AndroidApp
         }
         
         
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
+        //private void FabOnClick(object sender, EventArgs eventArgs)
+        //{
+        //    View view = (View) sender;
+        //    Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
+        //        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+        //}
 
-        private void FabOnClick2(object sender, EventArgs eventArgs)
-        {
-            View view = (View)sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
+        //private void FabOnClick2(object sender, EventArgs eventArgs)
+        //{
+        //    View view = (View)sender;
+        //    Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
+        //        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+        //}
 
-        private void TestTextOnChange(object sender, EventArgs eventArgs)
-        {
-            View view = (View)sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
+        //private void TestTextOnChange(object sender, EventArgs eventArgs)
+        //{
+        //    View view = (View)sender;
+        //    Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
+        //        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+        //}
     }
 }
 

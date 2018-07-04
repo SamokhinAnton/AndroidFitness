@@ -15,6 +15,7 @@ namespace Fitness.AndroidApp
     [Activity(Label = "Second")]
     public class Second : Activity
     {
+        private int Id { get; set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
