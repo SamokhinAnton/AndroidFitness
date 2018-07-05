@@ -112,12 +112,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\EditTextStyle.xml" />
-    <Content Include="Resources\layout\list_item.xml">
+    <Content Include="Resources\drawable\PopUpWindow.xml">
       <SubType>Designer</SubType>
     </Content>
     <AndroidResource Include="Resources\layout\login_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\windows\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

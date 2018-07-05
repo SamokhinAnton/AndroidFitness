@@ -4,7 +4,7 @@
        android:thickness="0dp"
 
        android:shape="rectangle">
-  <stroke android:width="3dp" android:color="#4799E8"/>
+  <stroke android:width="2dp" android:color="#4799E8"/>
   <corners android:radius="25dp" />
   <gradient
 
@@ -14,5 +14,6 @@
 
    android:type="linear"
 
-   android:angle="270"/>
+   android:angle="270"
+   />
 </shape>
