@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:id="@+id/goToLoginPage" />
+    <Button
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/goToRegistrationPage" />
 </RelativeLayout>

@@ -28,6 +28,15 @@ namespace Fitness.AndroidApp
 
             Button forgotButtonShow = FindViewById<Button>(Resource.Id.showForgotPasswordButton);
             forgotButtonShow.Click += ForgotPasswordBlockOnClick;
+
+            Button registration = FindViewById<Button>(Resource.Id.goToRegistrationPage);
+            registration.Click += ForgotPasswordBlockOnClick;
+        }
+
+        private void RegistrationClick(object sender, EventArgs eventArgs)
+        {
+            Intent intent = new Intent(this, typeof(RegistrationActivity));
+            StartActivity(intent);
         }
 
         private void LoginOnClick(object sender, EventArgs eventArgs)
