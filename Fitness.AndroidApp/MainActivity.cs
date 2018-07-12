@@ -6,12 +6,15 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Content;
+using System.Net.Http;
+using Fitness.AndroidApp.Models;
 
 namespace Fitness.AndroidApp
 {
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
 	{
+        public UserModel User = new UserModel() { Email = "wefwef", FirstName = "qwfqf", LastName = "ewfwefwe", Id = 2 };
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -33,9 +36,21 @@ namespace Fitness.AndroidApp
             Button loginButton = FindViewById<Button>(Resource.Id.goToLoginPage);
             loginButton.Click += LoginOnClick;
 
+            Button userData = FindViewById<Button>(Resource.Id.goToUserData);
+            userData.Click += UserDAtaOnClick;
+
         }
 
-		public override bool OnCreateOptionsMenu(IMenu menu)
+        private void UserDAtaOnClick(object sender, EventArgs eventArgs)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                
+            }
+        }
+
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
             return true;

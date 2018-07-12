@@ -18,9 +18,22 @@
         android:layout_marginTop="50dp"
         android:id="@+id/goToLoginPage" />
     <Button
-        android:text="Login"
+        android:text="Registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/goToRegistrationPage" />
+    <Button
+        android:text="UserData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:id="@+id/goToUserData" />
+    <TextView
+        android:text="@User.Email"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goToUserData"
+        android:id="@+id/textView1" />
 </RelativeLayout>

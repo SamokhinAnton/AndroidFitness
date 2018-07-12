@@ -20,8 +20,9 @@ namespace Fitness.AndroidApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.registration_activity);
 
-            Button login = FindViewById<Button>(Resource.Id.RegistrationButton);
-            Button forgotPassword = FindViewById<Button>(Resource.Id.RegistrationForgotPasswordButton);
+            Button login = FindViewById<Button>(Resource.Id.registrationSignInButton);
+            Button forgotPassword = FindViewById<Button>(Resource.Id.registrationForgotPasswordButton);
+
         }
     }
 }
