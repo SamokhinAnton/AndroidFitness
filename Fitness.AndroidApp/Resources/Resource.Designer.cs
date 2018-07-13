@@ -1891,8 +1891,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07003c
 			public const int action_mode_close_button = 2131165244;
 			
-			// aapt resource value: 0x7f070098
-			public const int action_settings = 2131165336;
+			// aapt resource value: 0x7f070099
+			public const int action_settings = 2131165337;
 			
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
@@ -2017,8 +2017,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07007d
 			public const int forgotPasswordBlock = 2131165309;
 			
-			// aapt resource value: 0x7f070097
-			public const int goToFirstPageButton = 2131165335;
+			// aapt resource value: 0x7f070098
+			public const int goToFirstPageButton = 2131165336;
 			
 			// aapt resource value: 0x7f07006c
 			public const int goToLoginPage = 2131165292;
@@ -2062,8 +2062,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
 			
-			// aapt resource value: 0x7f070096
-			public const int listView1 = 2131165334;
+			// aapt resource value: 0x7f070097
+			public const int listView1 = 2131165335;
 			
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
@@ -2119,32 +2119,32 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070054
 			public const int radio = 2131165268;
 			
+			// aapt resource value: 0x7f070094
+			public const int registrationButton = 2131165332;
+			
 			// aapt resource value: 0x7f070093
-			public const int registrationButton = 2131165331;
-			
-			// aapt resource value: 0x7f070092
-			public const int registrationConfirmPassword = 2131165330;
-			
-			// aapt resource value: 0x7f07008e
-			public const int registrationFirstName = 2131165326;
-			
-			// aapt resource value: 0x7f070095
-			public const int registrationForgotPasswordButton = 2131165333;
+			public const int registrationConfirmPassword = 2131165331;
 			
 			// aapt resource value: 0x7f07008f
-			public const int registrationLastName = 2131165327;
+			public const int registrationFirstName = 2131165327;
 			
-			// aapt resource value: 0x7f07008d
-			public const int registrationLogin = 2131165325;
-			
-			// aapt resource value: 0x7f070091
-			public const int registrationPassword = 2131165329;
+			// aapt resource value: 0x7f070096
+			public const int registrationForgotPasswordButton = 2131165334;
 			
 			// aapt resource value: 0x7f070090
-			public const int registrationPhone = 2131165328;
+			public const int registrationLastName = 2131165328;
 			
-			// aapt resource value: 0x7f070094
-			public const int registrationSignInButton = 2131165332;
+			// aapt resource value: 0x7f07008e
+			public const int registrationLogin = 2131165326;
+			
+			// aapt resource value: 0x7f070092
+			public const int registrationPassword = 2131165330;
+			
+			// aapt resource value: 0x7f070091
+			public const int registrationPhone = 2131165329;
+			
+			// aapt resource value: 0x7f070095
+			public const int registrationSignInButton = 2131165333;
 			
 			// aapt resource value: 0x7f070030
 			public const int right = 2131165232;
@@ -2160,6 +2160,9 @@ namespace Fitness.AndroidApp
 			
 			// aapt resource value: 0x7f07004b
 			public const int scrollIndicatorUp = 2131165259;
+			
+			// aapt resource value: 0x7f07008d
+			public const int scrollRegistrationPage = 2131165325;
 			
 			// aapt resource value: 0x7f07004c
 			public const int scrollView = 2131165260;
