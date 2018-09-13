@@ -20,7 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestLibrary\TestLibrary.csproj" />
+    <ProjectReference Include="..\Fitness.Core\Fitness.Core.csproj" />
+    <ProjectReference Include="..\Fitness.DataModels\Fitness.DataModels.csproj" />
   </ItemGroup>
 
 </Project>

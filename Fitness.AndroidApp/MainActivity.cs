@@ -8,14 +8,14 @@ using Android.Views;
 using Android.Content;
 using System.Net.Http;
 //using Fitness.AndroidApp.Models;
-//using TestLibrary.Entities.Users;
+using Fitness.DataModels.Entities.Users;
 
 namespace Fitness.AndroidApp
 {
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
 	{
-       // public UserTestModel User = new UserTestModel() { Email = "wefwef", FirstName = "qwfqf", LastName = "ewfwefwe", Id = 2 };
+        public UserModel User = new UserModel() { Email = "wefwef", FirstName = "qwfqf", LastName = "ewfwefwe", Id = 2 };
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{

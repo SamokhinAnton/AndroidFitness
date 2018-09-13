@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataModels
+namespace Fitness.DataModels
 {
     public class Class1
     {

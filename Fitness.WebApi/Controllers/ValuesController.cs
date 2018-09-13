@@ -20,7 +20,7 @@ namespace Fitness.WebApi.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return $"value = {id}";
         }
 
         // POST api/values

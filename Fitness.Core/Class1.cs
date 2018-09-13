@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestLibrary
+namespace Fitness.Core
 {
     public class Class1
     {
