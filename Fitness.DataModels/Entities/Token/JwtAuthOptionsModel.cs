@@ -1,4 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -31,14 +31,14 @@ namespace Fitness.DataModels.Entities.Token
         /// security key
         /// </summary>
         /// <returns></returns>
-        public static SymmetricSecurityKey GetSymmetricSecurityKey(string key)
-        {
-            return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
-        }
+        //public static SymmetricSecurityKey GetSymmetricSecurityKey(string key)
+        //{
+        //    return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
+        //}
 
-        public SymmetricSecurityKey GetSymmetricSecurityKey()
-        {
-            return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Key));
-        }
+        //public SymmetricSecurityKey GetSymmetricSecurityKey()
+        //{
+        //    return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Key));
+        //}
     }
 }

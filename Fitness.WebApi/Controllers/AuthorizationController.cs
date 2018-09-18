@@ -25,7 +25,7 @@ namespace Fitness.WebApi.Controllers
         {
             var user = new UserModel() { Email = "bbrownsett0@washingtonpost.com", Id = 3, FirstName = "Brandice", LastName = "Brownsett", Role = "admin" };
             var token = AuthHelper.Create(Request, user);
-            return Ok(token);
+            return Ok(user);
         }
 
         [Authorize(Roles = "admin")]

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Fitness.DataModels.Entities.Token;
 using Fitness.DataModels.Entities.Users;
@@ -44,7 +45,7 @@ namespace Fitness.WebApi
                         ValidateAudience = true,
                         ValidAudience = Configuration["JWTBearerSettings:Audience"],
                         ValidateLifetime = true,
-                        IssuerSigningKey = JwtAuthOptionsModel.GetSymmetricSecurityKey((Configuration["JWTBearerSettings:Key"])),
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["JWTBearerSettings:Key"])),
                         ValidateIssuerSigningKey = true
                     };
                 });
