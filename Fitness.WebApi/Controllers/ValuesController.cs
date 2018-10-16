@@ -22,9 +22,28 @@ namespace Fitness.WebApi.Controllers
         {
             return $"value = {id}";
         }
-
+        /// <summary>
+        /// Creates a TodoItem.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "id": 1,
+        ///        "name": "Item1",
+        ///        "isComplete": true
+        ///     }
+        ///
+        /// </remarks>
+        /// /// <param name="value"></param>
+        /// <returns>A newly created TodoItem</returns>
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>     
         // POST api/values
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
         public void Post([FromBody]string value)
         {
         }
@@ -35,6 +54,10 @@ namespace Fitness.WebApi.Controllers
         {
         }
 
+        /// <summary>
+        /// Deletes a specific TodoItem.
+        /// </summary>
+        /// <param name="id"> removing item id // int </param>    
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)

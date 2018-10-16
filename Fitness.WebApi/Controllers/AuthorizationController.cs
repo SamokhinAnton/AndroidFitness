@@ -25,7 +25,7 @@ namespace Fitness.WebApi.Controllers
         {
             var user = new UserModel() { Email = "bbrownsett0@washingtonpost.com", Id = 3, FirstName = "Brandice", LastName = "Brownsett", Role = "admin" };
             var token = AuthHelper.Create(Request, user);
-            return Ok(user);
+            return Ok(token);
         }
 
         [Authorize(Roles = "admin")]
@@ -39,6 +39,12 @@ namespace Fitness.WebApi.Controllers
                     Value = c.Value
                 });
             return Ok(claims);
+        }
+
+        [HttpDelete]
+        public IActionResult EmptyAttributes()
+        {
+            return BadRequest();
         }
     }
 }

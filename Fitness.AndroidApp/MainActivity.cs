@@ -54,7 +54,7 @@ namespace Fitness.AndroidApp
                 using (HttpClient client = new HttpClient(new AndroidClientHandler()))
                 {
                     UserModel user = null;
-                    var response = await client.GetAsync("http://172.28.150.58:51687/api/authorization/create");
+                    var response = await client.GetAsync("http://10.0.2.2:51687/api/authorization/create");
                     if (response.IsSuccessStatusCode)
                     {
                         user = JsonConvert.DeserializeObject<UserModel>(await response.Content.ReadAsStringAsync());
