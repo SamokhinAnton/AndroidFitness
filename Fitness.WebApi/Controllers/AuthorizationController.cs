@@ -40,5 +40,11 @@ namespace Fitness.WebApi.Controllers
                 });
             return Ok(claims);
         }
+
+        [HttpDelete]
+        public IActionResult EmptyAttributes()
+        {
+            return BadRequest();
+        }
     }
 }

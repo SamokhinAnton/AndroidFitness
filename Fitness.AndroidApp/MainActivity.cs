@@ -6,31 +6,36 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Content;
+using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 //using Fitness.AndroidApp.Models;
 using Fitness.DataModels.Entities.Users;
+using Xamarin.Android.Net;
 
 namespace Fitness.AndroidApp
 {
-	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-	public class MainActivity : AppCompatActivity
-	{
-        public UserModel User = new UserModel() { Email = "wefwef", FirstName = "qwfqf", LastName = "ewfwefwe", Id = 2 };
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    public class MainActivity : AppCompatActivity
+    {
+        //public UserModel User = new UserModel() { Email = "wefwef", FirstName = "qwfqf", LastName = "ewfwefwe", Id = 2 };
 
-		protected override void OnCreate(Bundle savedInstanceState)
-		{
-			base.OnCreate(savedInstanceState);
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
 
-			SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_main);
 
-			Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-			FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
             //EditText testText = FindViewById<EditText>(Resource.Id.testText);
             //testText.FocusChange += TestTextOnChange;
-            
+
             Button button = FindViewById<Button>(Resource.Id.goToSecondPageButton);
             button.Click += SecondOnClick;
 
@@ -42,11 +47,23 @@ namespace Fitness.AndroidApp
 
         }
 
-        private void UserDAtaOnClick(object sender, EventArgs eventArgs)
+        private async void UserDAtaOnClick(object sender, EventArgs eventArgs)
         {
-            using (HttpClient client = new HttpClient())
+            try
             {
-                
+                using (HttpClient client = new HttpClient(new AndroidClientHandler()))
+                {
+                    UserModel user = null;
+                    var response = await client.GetAsync("http://10.0.2.2:51687/api/authorization/create");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        user = JsonConvert.DeserializeObject<UserModel>(await response.Content.ReadAsStringAsync());
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                throw e;
             }
         }
 
@@ -55,7 +72,7 @@ namespace Fitness.AndroidApp
         {
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
             return true;
-        } 
+        }
 
         private void SecondOnClick(object sender, EventArgs eventArgs)
         {

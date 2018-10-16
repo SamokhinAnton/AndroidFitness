@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 
 namespace Fitness.WebApi.Utilities.JWT
 {
@@ -24,7 +25,7 @@ namespace Fitness.WebApi.Utilities.JWT
         public string Create(HttpRequest request, UserModel member)
         {
             var claims = CreateClaims(request, member);
-            var header = new JwtHeader(new SigningCredentials(_jwtOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
+            var header = new JwtHeader(new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtOptions.Key)), SecurityAlgorithms.HmacSha256));
             var payload = new JwtPayload(
                 issuer: _jwtOptions.Issuer,
                 audience: _jwtOptions.Audience,
@@ -41,7 +42,7 @@ namespace Fitness.WebApi.Utilities.JWT
         public string Extend(List<Claim> claims)
         {
             claims.Add(new Claim("sub", Guid.NewGuid().ToString()));
-            var header = new JwtHeader(new SigningCredentials(_jwtOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
+            var header = new JwtHeader(new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtOptions.Key)), SecurityAlgorithms.HmacSha256));
             var payload = new JwtPayload(
                 issuer: _jwtOptions.Issuer,
                 audience: null,
