@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Fitness.DataModels.Entities.Users;
 using Fitness.WebApi.Utilities.JWT;
@@ -25,7 +26,7 @@ namespace Fitness.WebApi.Controllers
         {
             var user = new UserModel() { Email = "bbrownsett0@washingtonpost.com", Id = 3, FirstName = "Brandice", LastName = "Brownsett", Role = "admin" };
             var token = AuthHelper.Create(Request, user);
-            return Ok(token);
+            return Ok(user);
         }
 
         [Authorize(Roles = "admin")]
@@ -41,10 +42,22 @@ namespace Fitness.WebApi.Controllers
             return Ok(claims);
         }
 
-        [HttpDelete]
-        public IActionResult EmptyAttributes()
+        [HttpGet]
+        public async Task<IActionResult> EmptyAttributes()
         {
-            return BadRequest();
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("accept", "application/json");
+                UserModel user = null;
+                var response = await client.GetAsync("http://172.21.242.192/api/Authorization/create");
+                if (response.IsSuccessStatusCode)
+                {
+                    //user = JsonConvert.DeserializeObject<UserModel>(await response.Content.ReadAsStringAsync());
+                    var result = JsonConvert.DeserializeObject<UserModel>(await response.Content.ReadAsStringAsync());
+                    return Ok(result);
+                }
+                return BadRequest();
+            }
         }
     }
 }

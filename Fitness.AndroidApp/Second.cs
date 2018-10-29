@@ -22,8 +22,9 @@ namespace Fitness.AndroidApp
             var id = Intent.GetIntExtra("Id", 0);
             var login = Intent.GetStringExtra("login") ?? "login empty";
             var password = Intent.GetStringExtra("password") ?? "password empty";
+            var resultFromFirst = Intent.GetStringExtra("result") ?? "result empty";
             ListView list = FindViewById<ListView>(Resource.Id.listView1);
-            list.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, new List<string>() { "First", "Second", id.ToString(), login, password});
+            list.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, new List<string>() { "First", "Second", id.ToString(), login, password, resultFromFirst });
 
             Button button = FindViewById<Button>(Resource.Id.goToFirstPageButton);
             button.Click += delegate

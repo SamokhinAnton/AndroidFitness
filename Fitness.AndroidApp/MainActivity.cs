@@ -49,21 +49,29 @@ namespace Fitness.AndroidApp
 
         private async void UserDAtaOnClick(object sender, EventArgs eventArgs)
         {
+            Intent intent = new Intent(this, typeof(Second));
             try
             {
                 using (HttpClient client = new HttpClient(new AndroidClientHandler()))
                 {
+                    client.DefaultRequestHeaders.Add("accept", "application/json");
                     UserModel user = null;
-                    var response = await client.GetAsync("http://10.0.2.2:51687/api/authorization/create");
+                    var response = await client.GetAsync("http://172.28.150.58:5000/api/Authorization/create");
+                    
                     if (response.IsSuccessStatusCode)
                     {
-                        user = JsonConvert.DeserializeObject<UserModel>(await response.Content.ReadAsStringAsync());
+                        //user = JsonConvert.DeserializeObject<UserModel>(await response.Content.ReadAsStringAsync());
+                        var result = await response.Content.ReadAsStringAsync();
+                        
+                        intent.PutExtra("result", result);
+                        StartActivity(intent);
                     }
                 }
             }
             catch(Exception e)
             {
-                throw e;
+                intent.PutExtra("result", e.Message + " Inner: " + e.InnerException.Message);
+                StartActivity(intent);
             }
         }
 
