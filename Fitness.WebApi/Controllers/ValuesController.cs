@@ -23,7 +23,8 @@ namespace Fitness.WebApi.Controllers
         {
             //return new string[] { "value1", "value2" };
             var roles = _context.Roles.Select(r => r.Role).ToList();
-            return roles;
+            var users = _context.Users.Where(u => u.Role.Id == 1).Select(u => u.Name).ToList();
+            return users;
         }
 
         // GET api/values/5

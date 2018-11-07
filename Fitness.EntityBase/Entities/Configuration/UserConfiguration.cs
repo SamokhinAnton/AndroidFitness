@@ -18,17 +18,10 @@ namespace Fitness.EntityBase.Entities.Configuration
             builder.Property(u => u.Login).IsRequired().HasMaxLength(100);
             builder.Property(u => u.Name).IsRequired().IsUnicode().HasMaxLength(256);
             builder.HasOne(u => u.Role).WithMany(r => r.Users).HasConstraintName("FK_User_Role").OnDelete(DeleteBehavior.Restrict); //.HasForeignKey(u => u.Role)
-            builder.Property(u => u.Soil).IsRequired().HasValueGenerator<SoilGenerator>();
-        }
-
-        public class SoilGenerator : ValueGenerator
-        {
-            public override bool GeneratesTemporaryValues => true;
-
-            protected override object NextValue(EntityEntry entry)
-            {
-                return "asdfg";
-            }
+            builder.Property(u => u.BirthDate).HasColumnType("Date").IsRequired();
+            builder.Property(u => u.isActive).IsRequired().HasColumnType("bit").HasDefaultValue(0);
+            builder.Property(u => u.isBanned).IsRequired().HasColumnType("bit").HasDefaultValue(0);
+            builder.Property(u => u.Created).IsRequired().HasDefaultValue(DateTimeOffset.UtcNow);
         }
     }
 }

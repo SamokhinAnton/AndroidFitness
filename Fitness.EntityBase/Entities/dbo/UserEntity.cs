@@ -20,6 +20,12 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public DateTime BirthDate { get; set; }
 
+        public bool isBanned { get; set; }
+
+        public DateTimeOffset Created { get; set; }
+
+        public bool isActive { get; set; }
+
         public RoleEntity Role { get; set; }
 
 
