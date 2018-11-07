@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Fitness.EntityBase;
+using Fitness.EntityBase.Entities.dbo;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fitness.WebApi.Controllers
@@ -9,11 +11,19 @@ namespace Fitness.WebApi.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private readonly FitnessContext _context;
+
+        public ValuesController(FitnessContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            //return new string[] { "value1", "value2" };
+            var roles = _context.Roles.Select(r => r.Role).ToList();
+            return roles;
         }
 
         // GET api/values/5
