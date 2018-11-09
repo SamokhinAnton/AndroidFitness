@@ -7,12 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Fitness.DataModels.Entities.Token;
 using Fitness.DataModels.Entities.Users;
+using Fitness.EntityBase;
 using Fitness.WebApi.Utilities.JWT;
 using Fitness.WebApi.Utilities.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -95,6 +97,9 @@ namespace Fitness.WebApi
                 c.IncludeXmlComments(xmlPath);
                 c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
             });
+
+            services.AddDbContext<FitnessContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("FitnessDb")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

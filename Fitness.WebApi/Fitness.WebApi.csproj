@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Fitness.Core\Fitness.Core.csproj" />
     <ProjectReference Include="..\Fitness.DataModels\Fitness.DataModels.csproj" />
+    <ProjectReference Include="..\Fitness.EntityBase\Fitness.EntityBase.csproj" />
   </ItemGroup>
   
   <PropertyGroup>
