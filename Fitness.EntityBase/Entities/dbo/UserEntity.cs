@@ -29,5 +29,10 @@ namespace Fitness.EntityBase.Entities.dbo
         public RoleEntity Role { get; set; }
 
 
+        public List<ProgramEntity> MyPrograms { get; set; }
+
+        public List<ProgramEntity> CreatedPrograms { get; set; }
+
+
     }
 }
