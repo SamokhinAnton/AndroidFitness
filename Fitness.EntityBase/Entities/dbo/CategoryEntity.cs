@@ -4,14 +4,16 @@ using System.Text;
 
 namespace Fitness.EntityBase.Entities.dbo
 {
-    public class RoleEntity
+    public class CategoryEntity
     {
         public int Id { get; set; }
 
-        public string Role { get; set; }
+        public string Name { get; set; }
 
         public string Description { get; set; }
 
-        public virtual List<UserEntity> Users { get; set; }
+        public string Image { get; set; }
+
+        public virtual List<ExerciseCategoryEntity> Exercises { get; set; }
     }
 }

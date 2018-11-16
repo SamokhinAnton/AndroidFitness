@@ -26,7 +26,14 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public bool isActive { get; set; }
 
+        public int RoleId { get; set; }
+
         public RoleEntity Role { get; set; }
+
+
+        public List<ProgramEntity> MyPrograms { get; set; }
+
+        public List<ProgramEntity> CreatedPrograms { get; set; }
 
 
     }
