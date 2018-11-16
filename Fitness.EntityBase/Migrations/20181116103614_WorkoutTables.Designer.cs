@@ -4,14 +4,16 @@ using Fitness.EntityBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Fitness.EntityBase.Migrations
 {
     [DbContext(typeof(FitnessContext))]
-    partial class FitnessContextModelSnapshot : ModelSnapshot
+    [Migration("20181116103614_WorkoutTables")]
+    partial class WorkoutTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,11 +55,11 @@ namespace Fitness.EntityBase.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryId");
+                    b.Property<int?>("CategoryId");
 
                     b.Property<DateTime>("Created");
 
-                    b.Property<int>("ExerciseId");
+                    b.Property<int?>("ExerciseId");
 
                     b.HasKey("Id")
                         .HasName("PK_ExerciseCategory")
@@ -68,12 +70,6 @@ namespace Fitness.EntityBase.Migrations
                     b.HasIndex("ExerciseId");
 
                     b.ToTable("ExerciseCategories");
-
-                    b.HasData(
-                        new { Id = 1, CategoryId = 1, Created = new DateTime(2018, 11, 16, 11, 9, 31, 76, DateTimeKind.Utc), ExerciseId = 1 },
-                        new { Id = 2, CategoryId = 1, Created = new DateTime(2018, 11, 16, 11, 9, 31, 76, DateTimeKind.Utc), ExerciseId = 2 },
-                        new { Id = 3, CategoryId = 1, Created = new DateTime(2018, 11, 16, 11, 9, 31, 76, DateTimeKind.Utc), ExerciseId = 3 }
-                    );
                 });
 
             modelBuilder.Entity("Fitness.EntityBase.Entities.dbo.ExerciseEntity", b =>
@@ -119,9 +115,9 @@ namespace Fitness.EntityBase.Migrations
                         .IsRequired()
                         .HasMaxLength(128);
 
-                    b.Property<Guid>("OwnerId");
+                    b.Property<Guid?>("OwnerId");
 
-                    b.Property<Guid>("UserId");
+                    b.Property<Guid?>("UserId");
 
                     b.HasKey("Id");
 
@@ -143,9 +139,9 @@ namespace Fitness.EntityBase.Migrations
 
                     b.Property<DateTime>("Created");
 
-                    b.Property<int>("ExerciseId");
+                    b.Property<int?>("ExerciseId");
 
-                    b.Property<int>("ProgramId");
+                    b.Property<int?>("ProgramId");
 
                     b.Property<DateTime>("Scheduled");
 
@@ -199,7 +195,7 @@ namespace Fitness.EntityBase.Migrations
 
                     b.Property<DateTime>("Done");
 
-                    b.Property<int>("ExerciseId");
+                    b.Property<int?>("FK_Sets_ProgramExercises");
 
                     b.Property<int>("PlannedReps");
 
@@ -212,7 +208,7 @@ namespace Fitness.EntityBase.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ExerciseId");
+                    b.HasIndex("FK_Sets_ProgramExercises");
 
                     b.ToTable("Sets");
                 });
@@ -227,7 +223,7 @@ namespace Fitness.EntityBase.Migrations
 
                     b.Property<DateTimeOffset>("Created")
                         .ValueGeneratedOnAdd()
-                        .HasDefaultValue(new DateTimeOffset(new DateTime(2018, 11, 16, 11, 9, 31, 68, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)));
+                        .HasDefaultValue(new DateTimeOffset(new DateTime(2018, 11, 16, 10, 36, 14, 57, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)));
 
                     b.Property<string>("LastName");
 
@@ -242,7 +238,7 @@ namespace Fitness.EntityBase.Migrations
 
                     b.Property<string>("Password");
 
-                    b.Property<int>("RoleId");
+                    b.Property<int?>("RoleId");
 
                     b.Property<string>("Soil");
 
@@ -269,14 +265,12 @@ namespace Fitness.EntityBase.Migrations
                     b.HasOne("Fitness.EntityBase.Entities.dbo.CategoryEntity", "Category")
                         .WithMany("Exercises")
                         .HasForeignKey("CategoryId")
-                        .HasConstraintName("FR_ExerciseCategory_Exercises")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasConstraintName("FR_ExerciseCategory_Exercises");
 
                     b.HasOne("Fitness.EntityBase.Entities.dbo.ExerciseEntity", "Exercise")
                         .WithMany("Categories")
                         .HasForeignKey("ExerciseId")
-                        .HasConstraintName("FR_ExerciseCategory_Categories")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasConstraintName("FR_ExerciseCategory_Categories");
                 });
 
             modelBuilder.Entity("Fitness.EntityBase.Entities.dbo.ProgramEntity", b =>
@@ -299,23 +293,19 @@ namespace Fitness.EntityBase.Migrations
                     b.HasOne("Fitness.EntityBase.Entities.dbo.ExerciseEntity", "Exercise")
                         .WithMany("ProgramExercises")
                         .HasForeignKey("ExerciseId")
-                        .HasConstraintName("FR_Exercise_ProgramExercises")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasConstraintName("FR_Exercise_ProgramExercises");
 
                     b.HasOne("Fitness.EntityBase.Entities.dbo.ProgramEntity", "Program")
                         .WithMany("ProgramExercises")
                         .HasForeignKey("ProgramId")
-                        .HasConstraintName("FR_Program_ProgramExercises")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasConstraintName("FR_Program_ProgramExercises");
                 });
 
             modelBuilder.Entity("Fitness.EntityBase.Entities.dbo.SetEntity", b =>
                 {
                     b.HasOne("Fitness.EntityBase.Entities.dbo.ProgramExercisesEntity", "Exercise")
                         .WithMany("Sets")
-                        .HasForeignKey("ExerciseId")
-                        .HasConstraintName("FK_Sets_ProgramExercises")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("FK_Sets_ProgramExercises");
                 });
 
             modelBuilder.Entity("Fitness.EntityBase.Entities.dbo.UserEntity", b =>

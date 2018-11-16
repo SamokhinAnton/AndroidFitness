@@ -8,6 +8,8 @@ namespace Fitness.EntityBase.Entities.dbo
     {
         public int Id { get; set; }
 
+        public int ExerciseId { get; set; }
+
         public ProgramExercisesEntity Exercise { get; set; }
 
         public double PlannedWeight { get; set; }

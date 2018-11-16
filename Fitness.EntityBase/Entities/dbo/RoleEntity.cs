@@ -12,6 +12,6 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public string Description { get; set; }
 
-        public List<UserEntity> Users { get; set; }
+        public virtual List<UserEntity> Users { get; set; }
     }
 }

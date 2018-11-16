@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Fitness.EntityBase;
 using Fitness.EntityBase.Entities.dbo;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fitness.WebApi.Controllers
 {
@@ -22,9 +23,12 @@ namespace Fitness.WebApi.Controllers
         public IEnumerable<string> Get()
         {
             //return new string[] { "value1", "value2" };
-            var roles = _context.Roles.Select(r => r.Role).ToList();
-            var users = _context.Users.Where(u => u.Role.Id == 1).Select(u => u.Name).ToList();
-            return users;
+            //var roles = _context.Roles.Select(r => r.Role).ToList();
+            //var users = _context.Users.Where(u => u.Role.Id == 1).Select(u => u.Name).ToList();
+            var exercises = _context.Categories.Include(c => c.Exercises).FirstOrDefault(c => c.Id == 1);
+            var ex2 = exercises.Exercises;
+            var ex3 = ex2.Select(e => e.Exercise?.Name).ToList();//.Exercises.Select(e => e.Exercise?.Name).ToList();
+            return ex3;
         }
 
         // GET api/values/5

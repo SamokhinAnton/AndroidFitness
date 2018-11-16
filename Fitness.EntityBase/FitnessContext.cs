@@ -9,6 +9,11 @@ namespace Fitness.EntityBase
 {
     public class FitnessContext : DbContext
     {
+        //public FitnessContext() : base()
+        //{
+
+        //}
+
         public FitnessContext(DbContextOptions<FitnessContext> options)
             : base(options)
         { }

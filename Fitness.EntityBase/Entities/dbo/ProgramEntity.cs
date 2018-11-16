@@ -14,9 +14,13 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public string Comment { get; set; }
 
-        public UserEntity User { get; set; }
+        public Guid UserId { get; set; }
 
-        public UserEntity Owner { get; set; }
+        public virtual UserEntity User { get; set; }
+
+        public Guid OwnerId { get; set; }
+
+        public virtual UserEntity Owner { get; set; }
 
         public virtual List<ProgramExercisesEntity> ProgramExercises { get; set; }
     }

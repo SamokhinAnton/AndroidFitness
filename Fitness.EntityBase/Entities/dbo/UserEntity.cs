@@ -26,6 +26,8 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public bool isActive { get; set; }
 
+        public int RoleId { get; set; }
+
         public RoleEntity Role { get; set; }
 
 

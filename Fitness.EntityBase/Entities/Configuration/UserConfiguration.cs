@@ -17,7 +17,7 @@ namespace Fitness.EntityBase.Entities.Configuration
             builder.ToTable("User").HasKey(u => u.Id).ForSqlServerIsClustered();
             builder.Property(u => u.Login).IsRequired().HasMaxLength(100);
             builder.Property(u => u.Name).IsRequired().IsUnicode().HasMaxLength(256);
-            builder.HasOne(u => u.Role).WithMany(r => r.Users).HasConstraintName("FK_User_Role").OnDelete(DeleteBehavior.Restrict); //.HasForeignKey(u => u.Role)
+            builder.HasOne(u => u.Role).WithMany(r => r.Users).HasForeignKey(u => u.RoleId).HasConstraintName("FK_User_Role").OnDelete(DeleteBehavior.Restrict); //.HasForeignKey(u => u.Role)
             builder.Property(u => u.BirthDate).HasColumnType("Date").IsRequired();
             builder.Property(u => u.isActive).IsRequired().HasColumnType("bit").HasDefaultValue(0);
             builder.Property(u => u.isBanned).IsRequired().HasColumnType("bit").HasDefaultValue(0);

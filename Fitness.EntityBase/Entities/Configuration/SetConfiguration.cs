@@ -14,7 +14,7 @@ namespace Fitness.EntityBase.Entities.Configuration
             builder.ToTable("Sets").HasKey(s => s.Id);
             builder.Property(s => s.isMissed).HasColumnType("bit").IsRequired();
             builder.Property(s => s.Comment).HasMaxLength(512);
-            builder.HasOne(s => s.Exercise).WithMany(e => e.Sets).HasForeignKey("FK_Sets_ProgramExercises");
+            builder.HasOne(s => s.Exercise).WithMany(e => e.Sets).HasForeignKey(s => s.ExerciseId).HasConstraintName("FK_Sets_ProgramExercises");
 
             builder.Property(s => s.PlannedReps).IsRequired();
             builder.Property(s => s.PlannedWeight).IsRequired();
