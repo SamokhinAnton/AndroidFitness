@@ -28,7 +28,7 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public int RoleId { get; set; }
 
-        public RoleEntity Role { get; set; }
+        public virtual RoleEntity Role { get; set; }
 
 
         public List<ProgramEntity> MyPrograms { get; set; }

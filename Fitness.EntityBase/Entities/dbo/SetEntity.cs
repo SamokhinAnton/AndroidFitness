@@ -10,7 +10,7 @@ namespace Fitness.EntityBase.Entities.dbo
 
         public int ExerciseId { get; set; }
 
-        public ProgramExercisesEntity Exercise { get; set; }
+        public virtual ProgramExercisesEntity Exercise { get; set; }
 
         public double PlannedWeight { get; set; }
 

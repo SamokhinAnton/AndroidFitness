@@ -4,14 +4,16 @@ using Fitness.EntityBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Fitness.EntityBase.Migrations
 {
     [DbContext(typeof(FitnessContext))]
-    partial class FitnessContextModelSnapshot : ModelSnapshot
+    [Migration("20181118120332_excatvirt")]
+    partial class excatvirt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,9 +72,9 @@ namespace Fitness.EntityBase.Migrations
                     b.ToTable("ExerciseCategories");
 
                     b.HasData(
-                        new { Id = 1, CategoryId = 1, Created = new DateTime(2018, 11, 18, 12, 24, 34, 423, DateTimeKind.Utc), ExerciseId = 1 },
-                        new { Id = 2, CategoryId = 1, Created = new DateTime(2018, 11, 18, 12, 24, 34, 423, DateTimeKind.Utc), ExerciseId = 2 },
-                        new { Id = 3, CategoryId = 1, Created = new DateTime(2018, 11, 18, 12, 24, 34, 423, DateTimeKind.Utc), ExerciseId = 3 }
+                        new { Id = 1, CategoryId = 1, Created = new DateTime(2018, 11, 18, 12, 3, 31, 946, DateTimeKind.Utc), ExerciseId = 1 },
+                        new { Id = 2, CategoryId = 1, Created = new DateTime(2018, 11, 18, 12, 3, 31, 947, DateTimeKind.Utc), ExerciseId = 2 },
+                        new { Id = 3, CategoryId = 1, Created = new DateTime(2018, 11, 18, 12, 3, 31, 947, DateTimeKind.Utc), ExerciseId = 3 }
                     );
                 });
 
@@ -227,7 +229,7 @@ namespace Fitness.EntityBase.Migrations
 
                     b.Property<DateTimeOffset>("Created")
                         .ValueGeneratedOnAdd()
-                        .HasDefaultValue(new DateTimeOffset(new DateTime(2018, 11, 18, 12, 24, 34, 414, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)));
+                        .HasDefaultValue(new DateTimeOffset(new DateTime(2018, 11, 18, 12, 3, 31, 937, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)));
 
                     b.Property<string>("LastName");
 
