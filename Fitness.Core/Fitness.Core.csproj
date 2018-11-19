@@ -6,6 +6,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Fitness.DataModels\Fitness.DataModels.csproj" />
+    <ProjectReference Include="..\Fitness.EntityBase\Fitness.EntityBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="FakeBackend\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
