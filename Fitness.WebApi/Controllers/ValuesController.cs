@@ -12,26 +12,23 @@ namespace Fitness.WebApi.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private readonly FitnessContext _context;
-
-        public ValuesController(FitnessContext context)
+        public ValuesController()
         {
-            _context = context;
         }
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            //return new string[] { "value1", "value2" };
-            //var roles = _context.Roles.Select(r => r.Role).ToList();
-            //var users = _context.Users.Where(u => u.Role.Id == 1).Select(u => u.Name).ToList();
-            var exercises = _context.Categories
-                .Include(c => c.Exercises).ThenInclude(ec => ec.Exercise)
-                .FirstOrDefault(c => c.Id == 1)
-                .Exercises
-                .Select(e => e.Exercise?.Name)
-                .ToList();
-            return exercises;
+            return new string[] { "value1", "value2" };
+            ////var roles = _context.Roles.Select(r => r.Role).ToList();
+            ////var users = _context.Users.Where(u => u.Role.Id == 1).Select(u => u.Name).ToList();
+            //var exercises = _context.Categories
+            //    .Include(c => c.Exercises).ThenInclude(ec => ec.Exercise)
+            //    .FirstOrDefault(c => c.Id == 1)
+            //    .Exercises
+            //    .Select(e => e.Exercise?.Name)
+            //    .ToList();
+            //return exercises;
         }
 
         // GET api/values/5

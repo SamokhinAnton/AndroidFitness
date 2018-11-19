@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Fitness.Core.Repositories.Categories;
+using Fitness.Core.Repositories.Categories.Models;
 using Fitness.DataModels.Entities.Token;
 using Fitness.DataModels.Entities.Users;
 using Fitness.EntityBase;
@@ -98,8 +100,11 @@ namespace Fitness.WebApi
                 c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
             });
 
+            services.AddTransient<ICategoryRepository<CategoryModel>, CategoryRepository>();
+
             services.AddDbContext<FitnessContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("FitnessDb")));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

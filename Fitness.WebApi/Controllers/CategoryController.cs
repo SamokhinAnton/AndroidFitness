@@ -19,5 +19,13 @@ namespace Fitness.WebApi.Controllers
             _category = category;
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var categories = await _category.GetAllAsync();
+            return Ok(categories);
+        }
+
     }
 }
