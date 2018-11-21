@@ -1,9 +1,9 @@
-﻿using Fitness.Core.Repositories.Categories.Models;
+﻿using Fitness.DataModels.Models.Categories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Fitness.Core.Repositories.Exercises.Models
+namespace Fitness.DataModels.Models.Exercises
 {
     public class ExerciseModel
     {

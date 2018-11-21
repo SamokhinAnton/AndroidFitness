@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Fitness.Core.Repositories.Categories;
-using Fitness.Core.Repositories.Categories.Models;
+using Fitness.DataModels.Models.Categories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

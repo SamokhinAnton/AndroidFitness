@@ -1,4 +1,4 @@
-﻿using Fitness.Core.Repositories.Categories.Models;
+﻿using Fitness.DataModels.Models.Categories;
 using Fitness.EntityBase.Entities.dbo;
 using System;
 using System.Collections.Generic;

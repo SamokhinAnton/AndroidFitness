@@ -6,9 +6,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Fitness.Core.Repositories.Categories;
-using Fitness.Core.Repositories.Categories.Models;
+using Fitness.Core.Repositories.Exercises;
 using Fitness.DataModels.Entities.Token;
 using Fitness.DataModels.Entities.Users;
+using Fitness.DataModels.Models.Categories;
+using Fitness.DataModels.Models.Exercises;
 using Fitness.EntityBase;
 using Fitness.WebApi.Utilities.JWT;
 using Fitness.WebApi.Utilities.Swagger;
@@ -101,6 +103,8 @@ namespace Fitness.WebApi
             });
 
             services.AddTransient<ICategoryRepository<CategoryModel>, CategoryRepository>();
+            services.AddTransient<IExerciseRepository<ExerciseModel>, ExerciseRepository>();
+
 
             services.AddDbContext<FitnessContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("FitnessDb")));
