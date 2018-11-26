@@ -16,5 +16,10 @@ namespace Fitness.DataModels.Models.Categories
         public string Image { get; set; }
 
         public IEnumerable<ExerciseModel> Exercises { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
