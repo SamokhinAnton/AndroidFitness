@@ -84,10 +84,7 @@ namespace Fitness.AndroidApp
 
         private void SecondOnClick(object sender, EventArgs eventArgs)
         {
-            Intent intent = new Intent(this, typeof(Second));
-            var r = new Random();
-            var id = r.Next(0, 200);
-            intent.PutExtra("Id", id);
+            Intent intent = new Intent(this, typeof(CategoryListActivity));
             StartActivity(intent);
         }
 

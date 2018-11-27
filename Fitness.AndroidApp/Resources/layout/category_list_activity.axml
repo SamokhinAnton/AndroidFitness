@@ -10,7 +10,6 @@
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:id="@+id/categoriesList"
-		android:background="#ff000000" />
+		android:id="@+id/categoriesList" />
 
 </LinearLayout>

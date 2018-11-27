@@ -1,4 +1,5 @@
-﻿using Fitness.DataModels.Models.Categories;
+﻿using Fitness.Core.Utilities.Extensions;
+using Fitness.DataModels.Models.Categories;
 using Fitness.DataModels.Models.Exercises;
 using Fitness.EntityBase;
 using Microsoft.EntityFrameworkCore;
@@ -51,13 +52,7 @@ namespace Fitness.Core.Repositories.Exercises
                 Name = exerciseEntity.Name,
                 Description = exerciseEntity.Description,
                 Added = exerciseEntity.Categories.FirstOrDefault(ec => ec.ExerciseId == exerciseEntity.Id).Created.ToShortDateString(),
-                Categories = exerciseEntity.Categories.Select(c => new CategoryModel()
-                {
-                    Id = c.Category.Id,
-                    Name = c.Category.Name,
-                    Description = c.Category.Description,
-                    Image = c.Category.Image
-                })
+                Categories = exerciseEntity.Categories.Select(c => c.Category.ToCategoryModel())
             };
             return exercise;
         }
