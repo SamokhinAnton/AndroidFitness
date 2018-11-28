@@ -61,11 +61,13 @@ namespace Fitness.AndroidApp.Services.Category
 
             textInput1.Text = string.Format($"{category.Id} - {category.Name}");
             textInput1.SetTextColor(Color.Blue);
+            textInput1.TextAlignment = TextAlignment.Center;
 
             var textInput2 = view.FindViewById<TextView>(Resource.Id.categoryItemView2);
 
-            textInput1.Text = string.Format($"{category.Description}");
-            textInput1.SetTextColor(Color.Gray);
+            textInput2.Text = string.Format($"{category.Description}");
+            textInput2.SetTextColor(Color.Gray);
+            textInput2.TextAlignment = TextAlignment.TextEnd;
 
             return view;
         }

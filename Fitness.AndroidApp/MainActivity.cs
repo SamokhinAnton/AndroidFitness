@@ -39,12 +39,21 @@ namespace Fitness.AndroidApp
             Button button = FindViewById<Button>(Resource.Id.goToSecondPageButton);
             button.Click += SecondOnClick;
 
+            Button gridCat = FindViewById<Button>(Resource.Id.goToGridCategoryButton);
+            gridCat.Click += GridCatDataOnClick;
+
             Button loginButton = FindViewById<Button>(Resource.Id.goToLoginPage);
             loginButton.Click += LoginOnClick;
 
             Button userData = FindViewById<Button>(Resource.Id.goToUserData);
             userData.Click += UserDAtaOnClick;
 
+        }
+
+        private void GridCatDataOnClick(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(CategoryGridView));
+            StartActivity(intent);
         }
 
         private async void UserDAtaOnClick(object sender, EventArgs eventArgs)

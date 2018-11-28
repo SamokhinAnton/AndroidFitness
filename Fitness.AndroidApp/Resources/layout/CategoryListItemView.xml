@@ -4,13 +4,13 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
   <TextView android:id="@+id/categoryItemView1"
-            android:textSize="30px"
+            android:textSize="24sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:textStyle="bold" />
   <TextView android:id="@+id/categoryItemView2"
-            android:textSize="15px"
+            android:textSize="12sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"/>

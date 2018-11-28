@@ -11,17 +11,16 @@ using Android.Views;
 using Android.Widget;
 using Fitness.AndroidApp.Services.Category;
 using Fitness.DataModels.Models.Categories;
-using Java.IO;
 
 namespace Fitness.AndroidApp
 {
-    [Activity(Label = "CategoryListActivity")]
-    public class CategoryListActivity : Activity
+    [Activity(Label = "CategoryGridView")]
+    public class CategoryGridView : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.category_list_activity);
+            SetContentView(Resource.Layout.category_grid_activity);
 
             var categories = new List<CategoryModel>() {
                     new CategoryModel() { Id = 4, Name = "name", Description = "description for first item", Image = "" },
@@ -33,15 +32,15 @@ namespace Fitness.AndroidApp
                     new CategoryModel() { Id = 37, Name = "name7", Description = "description for 7 item", Image = "" }
                 };
             var strs = new List<string>() { "name", "name2" };
-            ListView list = FindViewById<ListView>(Resource.Id.categoriesList);
-            list.Adapter = new CategoryScreenAdapter(this, categories);
-            list.ItemClick += List_ItemClick;
+            GridView grid = FindViewById<GridView>(Resource.Id.categoryGridView);
+            grid.Adapter = new CategoryScreenAdapter(this, categories);
+            grid.ItemClick += List_ItemClick;
         }
 
         private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            ListView list = FindViewById<ListView>(Resource.Id.categoriesList);
-            CategoryModel a = (list.Adapter as CategoryScreenAdapter)[e.Position];
+            GridView grid = FindViewById<GridView>(Resource.Id.categoryGridView);
+            CategoryModel a = (grid.Adapter as CategoryScreenAdapter)[e.Position];
         }
     }
 }

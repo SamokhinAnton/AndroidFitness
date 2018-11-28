@@ -7,27 +7,33 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main">
     <Button
-        android:text="SECOND PAGE"
+        android:text="list PAGE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/goToSecondPageButton" />
+	<Button
+        android:text="Grid PAGE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="50dp"
+        android:id="@+id/goToGridCategoryButton" />
     <Button
         android:text="Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/goToLoginPage" />
     <Button
         android:text="Registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/goToRegistrationPage" />
     <Button
         android:text="UserData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         android:id="@+id/goToUserData" />
     <TextView
         android:text="Email"
