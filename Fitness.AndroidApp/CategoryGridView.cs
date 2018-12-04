@@ -33,6 +33,7 @@ namespace Fitness.AndroidApp
                 };
             var strs = new List<string>() { "name", "name2" };
             GridView grid = FindViewById<GridView>(Resource.Id.categoryGridView);
+            
             grid.Adapter = new CategoryScreenAdapter(this, categories);
             grid.ItemClick += List_ItemClick;
         }

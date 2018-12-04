@@ -80,6 +80,7 @@
     <Compile Include="Services\AuthentificationService.cs" />
     <Compile Include="Services\Category\CategoryScreenAdapter.cs" />
     <Compile Include="Services\IAuthentificationService.cs" />
+    <Compile Include="Services\Images\ImageHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -139,7 +140,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
     <Folder Include="Resources\windows\" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +163,13 @@
     <AndroidResource Include="Resources\layout\category_grid_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable\mortalkombat1_16.png" />
+    <Content Include="Images\mortalkombat2_16.png" />
+    <Content Include="Images\mortalkombat3_16.png" />
+    <Content Include="Images\mortalkombat4_16.png" />
+    <Content Include="Images\mortalkombat5_16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
