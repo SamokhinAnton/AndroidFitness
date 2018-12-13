@@ -23,13 +23,13 @@ namespace Fitness.AndroidApp
             SetContentView(Resource.Layout.category_grid_activity);
 
             var categories = new List<CategoryModel>() {
-                    new CategoryModel() { Id = 4, Name = "name", Description = "description for first item", Image = "" },
-                    new CategoryModel() { Id = 7, Name = "name2", Description = "description for second item", Image = "" },
-                    new CategoryModel() { Id = 8, Name = "name3", Description = "description for 3 item", Image = "" },
-                    new CategoryModel() { Id = 9, Name = "name4", Description = "description for 4 item", Image = "" },
-                    new CategoryModel() { Id = 17, Name = "name5", Description = "description for 5 item", Image = "" },
-                    new CategoryModel() { Id = 27, Name = "name6", Description = "description for 6 item", Image = "" },
-                    new CategoryModel() { Id = 37, Name = "name7", Description = "description for 7 item", Image = "" }
+                    new CategoryModel() { Id = 4, Name = "name", Description = "description for first item", Image = "https://image.shutterstock.com/image-vector/bike-bicycle-cycle-icon-vector-450w-1174864702.jpg" },
+                    new CategoryModel() { Id = 7, Name = "name2", Description = "description for second item", Image = "https://image.shutterstock.com/image-vector/green-bike-transportation-logo-icon-450w-1212806968.jpg" },
+                    new CategoryModel() { Id = 8, Name = "name3", Description = "description for 3 item", Image = "https://image.shutterstock.com/image-vector/bike-bicycle-cycle-icon-vector-450w-1174864702.jpg" },
+                    new CategoryModel() { Id = 9, Name = "name4", Description = "description for 4 item", Image = "https://image.shutterstock.com/image-vector/green-bike-transportation-logo-icon-450w-1212806968.jpg" },
+                    new CategoryModel() { Id = 17, Name = "name5", Description = "description for 5 item", Image = "https://image.shutterstock.com/image-vector/bike-bicycle-cycle-icon-vector-450w-1174864702.jpg" },
+                    new CategoryModel() { Id = 27, Name = "name6", Description = "description for 6 item", Image = "https://image.shutterstock.com/image-vector/green-bike-transportation-logo-icon-450w-1212806968.jpg" },
+                    new CategoryModel() { Id = 37, Name = "name7", Description = "description for 7 item", Image = "https://image.shutterstock.com/image-vector/bike-bicycle-cycle-icon-vector-450w-1174864702.jpg" }
                 };
             var strs = new List<string>() { "name", "name2" };
             GridView grid = FindViewById<GridView>(Resource.Id.categoryGridView);

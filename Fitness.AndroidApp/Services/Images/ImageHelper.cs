@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,21 +17,20 @@ namespace Fitness.AndroidApp.Services.Images
 {
     public class ImageHelper
     {
-        public static async Task<Bitmap> GetImageFromUrl(string url)
+        public static Bitmap GetImageBitmapFromUrl(string url)
         {
-            using (var client = new HttpClient())
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
             {
-                var msg = await client.GetAsync(url);
-                if (msg.IsSuccessStatusCode)
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
                 {
-                    using (var stream = await msg.Content.ReadAsStreamAsync())
-                    {
-                        var bitmap = await BitmapFactory.DecodeStreamAsync(stream);
-                        return bitmap;
-                    }
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
                 }
             }
-            return null;
+
+            return imageBitmap;
         }
     }
 }

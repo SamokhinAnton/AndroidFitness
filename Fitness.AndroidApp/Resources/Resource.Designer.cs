@@ -1819,19 +1819,25 @@ namespace Fitness.AndroidApp
 			public const int abc_textfield_search_material = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int ButtonStyle = 2130837579;
+			public const int bike = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int design_fab_background = 2130837580;
+			public const int ButtonStyle = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int design_snackbar_background = 2130837581;
+			public const int cat_wl = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int EditTextStyle = 2130837582;
+			public const int design_fab_background = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
+			public const int design_snackbar_background = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int EditTextStyle = 2130837584;
+			
+			// aapt resource value: 0x7f020051
+			public const int notification_template_icon_bg = 2130837585;
 			
 			static Drawable()
 			{
@@ -1846,8 +1852,8 @@ namespace Fitness.AndroidApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070087
-			public const int action0 = 2131165319;
+			// aapt resource value: 0x7f07008b
+			public const int action0 = 2131165323;
 			
 			// aapt resource value: 0x7f07005a
 			public const int action_bar = 2131165274;
@@ -1873,8 +1879,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07005b
 			public const int action_context_bar = 2131165275;
 			
-			// aapt resource value: 0x7f07008b
-			public const int action_divider = 2131165323;
+			// aapt resource value: 0x7f07008f
+			public const int action_divider = 2131165327;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -1891,8 +1897,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07003c
 			public const int action_mode_close_button = 2131165244;
 			
-			// aapt resource value: 0x7f0700a0
-			public const int action_settings = 2131165344;
+			// aapt resource value: 0x7f0700a4
+			public const int action_settings = 2131165348;
 			
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
@@ -1912,11 +1918,14 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
 			
-			// aapt resource value: 0x7f070088
-			public const int cancel_action = 2131165320;
+			// aapt resource value: 0x7f07008c
+			public const int cancel_action = 2131165324;
 			
 			// aapt resource value: 0x7f07006c
 			public const int categoriesList = 2131165292;
+			
+			// aapt resource value: 0x7f070081
+			public const int categoryDescription = 2131165313;
 			
 			// aapt resource value: 0x7f07006b
 			public const int categoryGridView = 2131165291;
@@ -1924,11 +1933,17 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07006d
 			public const int categoryImageView = 2131165293;
 			
+			// aapt resource value: 0x7f07007f
+			public const int categoryInfoLayout = 2131165311;
+			
 			// aapt resource value: 0x7f07006e
 			public const int categoryItemView1 = 2131165294;
 			
 			// aapt resource value: 0x7f07006f
 			public const int categoryItemView2 = 2131165295;
+			
+			// aapt resource value: 0x7f070080
+			public const int categoryName = 2131165312;
 			
 			// aapt resource value: 0x7f07002b
 			public const int center = 2131165227;
@@ -1942,8 +1957,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070052
 			public const int checkbox = 2131165266;
 			
-			// aapt resource value: 0x7f07008e
-			public const int chronometer = 2131165326;
+			// aapt resource value: 0x7f070092
+			public const int chronometer = 2131165330;
 			
 			// aapt resource value: 0x7f070033
 			public const int clip_horizontal = 2131165235;
@@ -1990,20 +2005,23 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07005c
 			public const int edit_query = 2131165276;
 			
-			// aapt resource value: 0x7f070085
-			public const int emailForForgotPassword = 2131165317;
+			// aapt resource value: 0x7f070089
+			public const int emailForForgotPassword = 2131165321;
 			
 			// aapt resource value: 0x7f07001c
 			public const int end = 2131165212;
 			
-			// aapt resource value: 0x7f070093
-			public const int end_padder = 2131165331;
+			// aapt resource value: 0x7f070097
+			public const int end_padder = 2131165335;
 			
 			// aapt resource value: 0x7f070023
 			public const int enterAlways = 2131165219;
 			
 			// aapt resource value: 0x7f070024
 			public const int enterAlwaysCollapsed = 2131165220;
+			
+			// aapt resource value: 0x7f070082
+			public const int exerciseList = 2131165314;
 			
 			// aapt resource value: 0x7f070025
 			public const int exitUntilCollapsed = 2131165221;
@@ -2029,11 +2047,11 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070038
 			public const int @fixed = 2131165240;
 			
-			// aapt resource value: 0x7f070084
-			public const int forgotPasswordBlock = 2131165316;
+			// aapt resource value: 0x7f070088
+			public const int forgotPasswordBlock = 2131165320;
 			
-			// aapt resource value: 0x7f07009f
-			public const int goToFirstPageButton = 2131165343;
+			// aapt resource value: 0x7f0700a3
+			public const int goToFirstPageButton = 2131165347;
 			
 			// aapt resource value: 0x7f070071
 			public const int goToGridCategoryButton = 2131165297;
@@ -2065,8 +2083,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f070092
-			public const int info = 2131165330;
+			// aapt resource value: 0x7f070096
+			public const int info = 2131165334;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2074,29 +2092,29 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07002f
 			public const int left = 2131165231;
 			
-			// aapt resource value: 0x7f07008c
-			public const int line1 = 2131165324;
-			
 			// aapt resource value: 0x7f070090
-			public const int line3 = 2131165328;
+			public const int line1 = 2131165328;
+			
+			// aapt resource value: 0x7f070094
+			public const int line3 = 2131165332;
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
 			
-			// aapt resource value: 0x7f07009e
-			public const int listView1 = 2131165342;
+			// aapt resource value: 0x7f0700a2
+			public const int listView1 = 2131165346;
 			
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
-			// aapt resource value: 0x7f07007f
-			public const int login = 2131165311;
+			// aapt resource value: 0x7f070083
+			public const int login = 2131165315;
 			
-			// aapt resource value: 0x7f070082
-			public const int loginButton = 2131165314;
+			// aapt resource value: 0x7f070086
+			public const int loginButton = 2131165318;
 			
-			// aapt resource value: 0x7f07008a
-			public const int media_actions = 2131165322;
+			// aapt resource value: 0x7f07008e
+			public const int media_actions = 2131165326;
 			
 			// aapt resource value: 0x7f07001d
 			public const int middle = 2131165213;
@@ -2125,8 +2143,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070046
 			public const int parentPanel = 2131165254;
 			
-			// aapt resource value: 0x7f070081
-			public const int password = 2131165313;
+			// aapt resource value: 0x7f070085
+			public const int password = 2131165317;
 			
 			// aapt resource value: 0x7f070029
 			public const int pin = 2131165225;
@@ -2140,32 +2158,32 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070054
 			public const int radio = 2131165268;
 			
-			// aapt resource value: 0x7f07009b
-			public const int registrationButton = 2131165339;
+			// aapt resource value: 0x7f07009f
+			public const int registrationButton = 2131165343;
+			
+			// aapt resource value: 0x7f07009e
+			public const int registrationConfirmPassword = 2131165342;
 			
 			// aapt resource value: 0x7f07009a
-			public const int registrationConfirmPassword = 2131165338;
+			public const int registrationFirstName = 2131165338;
 			
-			// aapt resource value: 0x7f070096
-			public const int registrationFirstName = 2131165334;
+			// aapt resource value: 0x7f0700a1
+			public const int registrationForgotPasswordButton = 2131165345;
 			
-			// aapt resource value: 0x7f07009d
-			public const int registrationForgotPasswordButton = 2131165341;
-			
-			// aapt resource value: 0x7f070097
-			public const int registrationLastName = 2131165335;
-			
-			// aapt resource value: 0x7f070095
-			public const int registrationLogin = 2131165333;
+			// aapt resource value: 0x7f07009b
+			public const int registrationLastName = 2131165339;
 			
 			// aapt resource value: 0x7f070099
-			public const int registrationPassword = 2131165337;
+			public const int registrationLogin = 2131165337;
 			
-			// aapt resource value: 0x7f070098
-			public const int registrationPhone = 2131165336;
+			// aapt resource value: 0x7f07009d
+			public const int registrationPassword = 2131165341;
 			
 			// aapt resource value: 0x7f07009c
-			public const int registrationSignInButton = 2131165340;
+			public const int registrationPhone = 2131165340;
+			
+			// aapt resource value: 0x7f0700a0
+			public const int registrationSignInButton = 2131165344;
 			
 			// aapt resource value: 0x7f070030
 			public const int right = 2131165232;
@@ -2182,8 +2200,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07004b
 			public const int scrollIndicatorUp = 2131165259;
 			
-			// aapt resource value: 0x7f070094
-			public const int scrollRegistrationPage = 2131165332;
+			// aapt resource value: 0x7f070098
+			public const int scrollRegistrationPage = 2131165336;
 			
 			// aapt resource value: 0x7f07004c
 			public const int scrollView = 2131165260;
@@ -2224,8 +2242,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070068
 			public const int select_dialog_listview = 2131165288;
 			
-			// aapt resource value: 0x7f070086
-			public const int sendEmail = 2131165318;
+			// aapt resource value: 0x7f07008a
+			public const int sendEmail = 2131165322;
 			
 			// aapt resource value: 0x7f070053
 			public const int shortcut = 2131165267;
@@ -2233,8 +2251,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070011
 			public const int showCustom = 2131165201;
 			
-			// aapt resource value: 0x7f070083
-			public const int showForgotPasswordButton = 2131165315;
+			// aapt resource value: 0x7f070087
+			public const int showForgotPasswordButton = 2131165319;
 			
 			// aapt resource value: 0x7f070012
 			public const int showHome = 2131165202;
@@ -2269,8 +2287,8 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070031
 			public const int start = 2131165233;
 			
-			// aapt resource value: 0x7f070089
-			public const int status_bar_latest_event_content = 2131165321;
+			// aapt resource value: 0x7f07008d
+			public const int status_bar_latest_event_content = 2131165325;
 			
 			// aapt resource value: 0x7f070065
 			public const int submit_area = 2131165285;
@@ -2278,11 +2296,11 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f070091
-			public const int text = 2131165329;
+			// aapt resource value: 0x7f070095
+			public const int text = 2131165333;
 			
-			// aapt resource value: 0x7f07008f
-			public const int text2 = 2131165327;
+			// aapt resource value: 0x7f070093
+			public const int text2 = 2131165331;
 			
 			// aapt resource value: 0x7f07004d
 			public const int textSpacerNoButtons = 2131165261;
@@ -2290,11 +2308,11 @@ namespace Fitness.AndroidApp
 			// aapt resource value: 0x7f070075
 			public const int textView1 = 2131165301;
 			
-			// aapt resource value: 0x7f070080
-			public const int textView2 = 2131165312;
+			// aapt resource value: 0x7f070084
+			public const int textView2 = 2131165316;
 			
-			// aapt resource value: 0x7f07008d
-			public const int time = 2131165325;
+			// aapt resource value: 0x7f070091
+			public const int time = 2131165329;
 			
 			// aapt resource value: 0x7f070043
 			public const int title = 2131165251;
@@ -2503,49 +2521,52 @@ namespace Fitness.AndroidApp
 			public const int design_navigation_menu_item = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int login_activity = 2130968618;
+			public const int exercise_list_activity = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int notification_media_action = 2130968619;
+			public const int login_activity = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int notification_media_cancel_action = 2130968620;
+			public const int notification_media_action = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_template_big_media = 2130968621;
+			public const int notification_media_cancel_action = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_template_big_media_narrow = 2130968622;
+			public const int notification_template_big_media = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_template_lines = 2130968623;
+			public const int notification_template_big_media_narrow = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_template_media = 2130968624;
+			public const int notification_template_lines = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_part_chronometer = 2130968625;
+			public const int notification_template_media = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_part_time = 2130968626;
+			public const int notification_template_part_chronometer = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int registration_activity = 2130968627;
+			public const int notification_template_part_time = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int Second = 2130968628;
+			public const int registration_activity = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int select_dialog_item_material = 2130968629;
+			public const int Second = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int select_dialog_multichoice_material = 2130968630;
+			public const int select_dialog_item_material = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int select_dialog_singlechoice_material = 2130968631;
+			public const int select_dialog_multichoice_material = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int support_simple_spinner_dropdown_item = 2130968632;
+			public const int select_dialog_singlechoice_material = 2130968632;
+			
+			// aapt resource value: 0x7f040039
+			public const int support_simple_spinner_dropdown_item = 2130968633;
 			
 			static Layout()
 			{

@@ -68,6 +68,7 @@
     <Compile Include="CategoryGridView.cs" />
     <Compile Include="CategoryListActivity.cs" />
     <Compile Include="Common\App.cs" />
+    <Compile Include="ExerciseListActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -88,6 +89,7 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cat_wl.jpg" />
     <AndroidResource Include="Resources\layout\activity_main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -140,6 +142,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\" />
     <Folder Include="Resources\windows\" />
   </ItemGroup>
   <ItemGroup>
@@ -165,11 +168,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\drawable\mortalkombat1_16.png" />
-    <Content Include="Images\mortalkombat2_16.png" />
-    <Content Include="Images\mortalkombat3_16.png" />
-    <Content Include="Images\mortalkombat4_16.png" />
-    <Content Include="Images\mortalkombat5_16.png" />
+    <AndroidResource Include="Resources\drawable\bike.jpg" />
+    <AndroidResource Include="Resources\layout\exercise_list_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

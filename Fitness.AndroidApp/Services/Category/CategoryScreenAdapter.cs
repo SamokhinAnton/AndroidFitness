@@ -59,13 +59,12 @@ namespace Fitness.AndroidApp.Services.Category
             }
 
             var imageInput = view.FindViewById<ImageView>(Resource.Id.categoryImageView);
-            using(var image = ImageHelper.GetImageFromUrl("https://previews.123rf.com/images/iarada/iarada1506/iarada150600027/41490531-health-and-fitness-icons-set-sport-dancing-icon-optimized-for-size-32x32-pixels.jpg").Result)
+            using (var image = ImageHelper.GetImageBitmapFromUrl(category.Image))
             {
                 imageInput.SetImageBitmap(image);
             }
-            
-            //imageInput.SetImageResource
-
+            //var imageRes = (int)typeof(Resource.Drawable).GetField("bike").GetValue(null);
+            //imageInput.SetImageResource(imageRes);
 
             var textInput1 = view.FindViewById<TextView>(Resource.Id.categoryItemView1);
 

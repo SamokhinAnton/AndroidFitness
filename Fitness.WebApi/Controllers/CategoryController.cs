@@ -57,5 +57,12 @@ namespace Fitness.WebApi.Controllers
             var categories = _category.GetAllAsync();
             return Ok(categories);
         }
+
+        [HttpGet("Search")]
+        public async Task<IActionResult> Search(string pattern)
+        {
+            var categories = await _category.SearchAsync(pattern);
+            return Ok(categories);
+        }
     }
 }

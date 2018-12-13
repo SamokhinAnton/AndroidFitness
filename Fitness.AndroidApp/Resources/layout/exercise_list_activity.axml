@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:id="@+id/categoryInfoLayout"
+		android:layout_width="match_parent"
+		android:layout_height="150dp"
+		android:background="@drawable/cat_wl">
+		<TextView
+			android:text="Category Name"
+			android:id="@+id/categoryName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:layout_gravity="top"
+			android:layout_weight="1" />
+		<TextView
+			android:text="CATEGORY DESCRIPTION!! BIG CATEGORY DESCRIPTION!! BIG CATEGORY DESCRIPTION!! BIG CATEGORY DESCRIPTION!! BIG CATEGORY DESCRIPTION!!"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:layout_weight="1"
+			android:id="@+id/categoryDescription" />
+	</LinearLayout>
+	<ListView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/exerciseList" />
+</LinearLayout>
