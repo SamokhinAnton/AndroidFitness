@@ -48,6 +48,16 @@ namespace Fitness.AndroidApp
             Button userData = FindViewById<Button>(Resource.Id.goToUserData);
             userData.Click += UserDAtaOnClick;
 
+            Button allExercises = FindViewById<Button>(Resource.Id.goToAllExercises);
+            allExercises.Click += ToAllExercisesOnClick;
+
+        }
+
+        private void ToAllExercisesOnClick(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(ExerciseListActivity));
+            intent.PutExtra("categoryId", 0);
+            StartActivity(intent);
         }
 
         private void GridCatDataOnClick(object sender, EventArgs e)

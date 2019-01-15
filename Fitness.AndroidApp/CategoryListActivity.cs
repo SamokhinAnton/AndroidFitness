@@ -32,7 +32,6 @@ namespace Fitness.AndroidApp
                     new CategoryModel() { Id = 27, Name = "name6", Description = "description for 6 item", Image = "" },
                     new CategoryModel() { Id = 37, Name = "name7", Description = "description for 7 item", Image = "" }
                 };
-            var strs = new List<string>() { "name", "name2" };
             ListView list = FindViewById<ListView>(Resource.Id.categoriesList);
             list.Adapter = new CategoryScreenAdapter(this, categories);
             list.ItemClick += List_ItemClick;
@@ -41,7 +40,10 @@ namespace Fitness.AndroidApp
         private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             ListView list = FindViewById<ListView>(Resource.Id.categoriesList);
-            CategoryModel a = (list.Adapter as CategoryScreenAdapter)[e.Position];
+            CategoryModel category = (list.Adapter as CategoryScreenAdapter)[e.Position];
+            Intent intent = new Intent(this, typeof(ExerciseListActivity));
+            intent.PutExtra("categoryId", category.Id);
+            StartActivity(intent);
         }
     }
 }

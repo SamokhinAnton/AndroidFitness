@@ -80,6 +80,7 @@
     <Compile Include="Services\AlertService.cs" />
     <Compile Include="Services\AuthentificationService.cs" />
     <Compile Include="Services\Category\CategoryScreenAdapter.cs" />
+    <Compile Include="Services\Exercises\ExerciseScreenAdapter.cs" />
     <Compile Include="Services\IAuthentificationService.cs" />
     <Compile Include="Services\Images\ImageHelper.cs" />
   </ItemGroup>

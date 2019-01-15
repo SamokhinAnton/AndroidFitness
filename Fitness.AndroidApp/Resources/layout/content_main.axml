@@ -35,6 +35,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:id="@+id/goToUserData" />
+	<Button
+        android:text="Exercises"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:id="@+id/goToAllExercises" />
     <TextView
         android:text="Email"
         android:textAppearance="?android:attr/textAppearanceMedium"
